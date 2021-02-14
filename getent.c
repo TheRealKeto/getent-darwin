@@ -41,7 +41,6 @@ __FBSDID("$FreeBSD$");
 #include <net/if.h>
 #include <netinet/if_ether.h>
 #include <netinet/in.h>		/* for INET6_ADDRSTRLEN */
-#include <rpc/rpcent.h>
 
 #include <assert.h>
 #include <ctype.h>
@@ -57,6 +56,10 @@ __FBSDID("$FreeBSD$");
 #include <string.h>
 #include <unistd.h>
 #include <utmpx.h>
+
+#include <arpa/nameser_compat.h>
+#include "utmpx-defines.h"
+int setutxdb(int db, const char *file);
 
 static int	usage(void);
 static int	parsenum(const char *, unsigned long *);

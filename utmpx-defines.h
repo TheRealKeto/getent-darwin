@@ -1,0 +1,3 @@
+#define UTXDB_ACTIVE 0
+#define UTXDB_LASTLOGIN 1
+#define UTXDB_LOG 2
